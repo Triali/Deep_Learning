@@ -181,6 +181,16 @@ if __name__ == "__main__":
 
             plt.pause(0.01)
     torch.save(model,'/ODE/NNODE_weights.pth')
+    ax_loss.savefig('Loss.png', dpi=300, bbox_inches='tight')
+    axs.savefig('subplots.png', dpi=300, bbox_inches='tight')
+
+    # model.eval()
+    # torch.no_grad()
+    # train_losses = np.zeros(4)
+    # train_losses = train(ysub, tsub, model, optimizer, lossfn)
+
+
+
     print('DONE')
     plt.ioff()
     plt.show()
